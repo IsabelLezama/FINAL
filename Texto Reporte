@@ -1,0 +1,128 @@
+%\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Circuitos eléctricos}
+\author{Isabel Gonzalez Lezama}
+
+\begin{document}
+\maketitle
+
+
+\section{Introduction}
+
+¿Para qué sirven el las ecuaciones diferenciales? las ecuaciones diferenciales son muy usadas en la vida real como por ejemplo calcular ¿a que velocidad se forman las bacterias? también son muy usadas como modelos matemáticos en el estudio de la dinámica de poblaciones,los comportamientos radioactivos, aplicación a las leyes de la termodinámica, reacciones químicas, el cálculo de circuitos y series, en física son muy usadas para el cálculo de caída de los cuerpos y la resistencia del aire. Las ecuaciones diferenciales tienen una aplicabilidad en el día a día muy amplio, de hecho en mi caso yo uso las ecuaciones diferenciales en cálculo de circuitos y problemas de física.
+
+\section{Descripción del problema a resolver}
+La solución analítica para la distribución de energía eléctrica, a través de los componentes de un circuito eléctrico se
+realiza en el régimen permanente, es decir cuando el sistema ya se estabilizó, por lo que muchas veces se pierde
+información en el momento de pasar un circuito de una
+condición a otra, ya sea por un cambio en la tensión aplicada o por una modificación de sus elementos. 
+
+La forma general de este circuito bajo excitación de tensión
+será el siguiente: \begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{circuito.png}
+\end{figure}
+
+Aplicando la segunda ley de Kirchoff a éste, se tiene: 
+
+
+\begin{figure1}
+\centering
+\includegraphics[width=0.3\textwidth]{form.png}
+\end{figure1}
+
+
+
+Donde Vc es la caida de tension en el capacitor y Vr=iR es la caida de tension en a resistencia. Por definicion de corriente se sabe que:
+
+
+i=dq/dt ; 
+
+y la definicion de capacidad:
+
+
+c=dq/dv ;
+
+
+llegando a la expresionde la corriente:
+
+
+i=c(dv/dt)
+
+Que reemplazada en la expresion de 
+
+Vr = cR (dVc/dt);
+
+
+Asi, V(t)=cR(dVc/dt)+Vr
+ 
+ La cual es una ecuacion diferencial liuneal de promer orden y de primer grado, no homogenea
+
+\subsection{Problema}
+Se resuelve un problema de circuitos
+
+\begin{figure2}
+\centering
+\includegraphics[width=0.8\textwidth]{ejemplo.png}
+\end{figure2}
+
+
+Utilizando la formula anterior: 
+
+
+V(t)=cR(dVc/dt)+Vr
+
+
+V(t)= cR y'+y
+
+
+V(t)=((1.5x10**-6F)(2x10**6)y'+y
+
+V(t)-y=y';
+
+
+
+
+
+
+\section{Resultados}
+
+\subsection{Método de Euler}
+
+\begin{figure3}
+\centering
+\includegraphics[width=0.8\textwidth]{tab.png}
+\end{figure3}
+
+
+\begin{figure4}
+\centering
+\includegraphics[width=0.8\textwidth]{gra.png}
+\end{figure4}
+
+
+
+
+
+\section{Conclusión}
+
+Con este proyecto se puede concluir que estos métodos son de gran utilidad para casi cualquier área de la ingeniería. Los tres métodos pueden tener varias aplicaciones en diferentes campos, como en este caso para la ciencia, para problemas sencillos o muy complejos. Los problemas resueltos tiene la ventaja de tener un margen de error mínimo ya que gracias a la programación nosotros mismos determinamos la tolerancia que queramos y eso es sumamente importante, ya que si lo hiciéramos a mano todos estos cálculos tardaremos mucho tiempo y muy posiblemente cometamos muchos errores en su cálculo.
+
+ También se pudo concluir que el método y la ingeniería más específicamente en ciencias como la física tiene una relación unida ya que si tomamos en cuenta que cada vez que se desarrolle un nuevo método de cálculo dentro de lo que son los métodos numéricos los cálculos en trayectorias, velocidades en cuestión de tiempo o incluso como el ejemplo de espacial, en alguna trayectoria de algún cohete que resulta interesante saber la relación de masa y velocidad respecto a su función se podrían volver más exactos, más veloces o en algunas ocasiones ambas.
+
+
+
+\end{document}
